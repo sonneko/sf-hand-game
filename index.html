@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracking with MediaPipe Tasks</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+        }
+        video, canvas {
+            width: 100%;
+            height: 100%;
+            transform: scaleX(-1); /* カメラ映像を反転 */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>手のトラッキング (MediaPipe Tasks)</h1>
+    <div class="container">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div id="console"></div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
